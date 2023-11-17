@@ -20,35 +20,10 @@ For comprehensive guidance on Flutter development, visit the [online documentati
 
 ## Spotify UI Examples
 
-![Spotify UI Example 1](https://link-to-your-image1.png)
-![Spotify UI Example 2](https://link-to-your-image2.png)
-![Spotify UI Example 3](https://link-to-your-image3.png)
+![Spotify UI Example 1](spotify_ui_example_1.png)
+![Spotify UI Example 2](spotify_ui_example_2.png)
+![Spotify UI Example 3](spotify_ui_example_3.png)
 
-## Contributing
-
-Contributions are welcome! If you have suggestions or improvements:
-
-1. Fork the repository.
-2. Create a new branch:
-
-    ```bash
-    git checkout -b feature/new_feature
-    ```
-
-3. Add your changes and commit:
-
-    ```bash
-    git add .
-    git commit -m "Add: New Feature - [Your Feature Name]"
-    ```
-
-4. Push to the branch:
-
-    ```bash
-    git push origin feature/new_feature
-    ```
-
-5. Create a pull request.
 
 ## Connect with Us
 
