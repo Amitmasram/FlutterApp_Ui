@@ -1,0 +1,35 @@
+# pubspec.yaml
+
+# Package name and description
+name: persistent_theme
+description: A new Flutter project.
+
+# Publishing configuration
+publish_to: 'none' # Prevent accidental publishing to pub.dev
+
+# Version information
+version: 1.0.0+1
+
+# SDK constraints
+environment:
+  sdk: '>=3.1.4 <4.0.0'
+
+# Dependencies for the project
+dependencies:
+  flutter:
+    sdk: flutter
+  cupertino_icons: ^1.0.2 # Icons for iOS style
+  bloc: ^8.1.2 # State management library
+  flutter_bloc: ^8.1.3 # Flutter-specific extensions for BLoC
+  equatable: ^2.0.5 # Simplifies equality comparisons
+  shared_preferences: ^2.2.2 # Persistent storage for theme preferences
+  flutter_lints: ^2.0.0 # Lint rules to encourage good coding practices
+
+# Development dependencies
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+# Flutter-specific configuration
+flutter:
+  uses-material-design: true
