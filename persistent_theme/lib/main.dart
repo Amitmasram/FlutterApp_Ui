@@ -35,6 +35,7 @@ class MyApp extends StatelessWidget {
           if (state is ThemeLoaded) {
             // Use the theme from the state if it's loaded
             return MaterialApp(
+              debugShowCheckedModeBanner: false,
               title: 'Flutter Demo',
               theme: state.themeData,
               home: const ThemeUi(),
@@ -42,6 +43,7 @@ class MyApp extends StatelessWidget {
           } else if (state is PreservedThemeLoaded) {
             // Use the preserved theme if available
             return MaterialApp(
+              debugShowCheckedModeBanner: false,
               title: 'Flutter Demo',
               theme: _switchTheme(state.name),
               home: const ThemeUi(),
@@ -49,6 +51,7 @@ class MyApp extends StatelessWidget {
           } else {
             // Use a default theme if neither loaded nor preserved
             return MaterialApp(
+              debugShowCheckedModeBanner: false,
               title: 'Flutter Demo',
               theme: ThemeData(primarySwatch: Colors.blue, useMaterial3: true),
               home: const ThemeUi(),
