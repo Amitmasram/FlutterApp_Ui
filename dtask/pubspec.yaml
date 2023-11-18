@@ -1,0 +1,42 @@
+# The name of your Flutter project
+name: dtask
+
+# A brief description of your Flutter project
+description: A new Flutter project.
+
+# This line prevents the package from being accidentally published to pub.dev
+# using `flutter pub publish`. Useful for private packages.
+publish_to: 'none'
+
+# Versioning information for your application
+version: 1.0.0+1
+
+# Minimum required Flutter SDK version
+environment:
+  sdk: '>=2.18.6 <3.0.0'
+
+# Dependencies specify other packages that your package needs to work
+dependencies:
+  flutter:
+    sdk: flutter
+  cupertino_icons: ^1.0.2
+  animated_box_decoration: 
+  dotted_border: ^2.0.0+3
+  flutter_svg: ^1.1.5
+  animations: ^2.0.7
+  morphable_shape: ^1.6.5
+
+# Development dependencies for testing
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^2.0.0
+
+# Flutter-specific configurations
+flutter:
+  # Ensures that the Material Icons font is included with your application
+  uses-material-design: true
+
+  # Assets to be included in your application
+  assets:
+    - assets/
