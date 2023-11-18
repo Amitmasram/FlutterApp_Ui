@@ -1,0 +1,54 @@
+# The name of your Flutter project
+name: ninebot
+
+# A brief description of your Flutter project
+description: A new Flutter project.
+
+# This line prevents the package from being accidentally published to pub.dev
+# using `flutter pub publish`. Useful for private packages.
+publish_to: 'none' # Remove this line if you wish to publish to pub.dev
+
+# Versioning information for your application
+version: 1.0.0+1
+
+# Minimum required Flutter SDK version
+environment:
+  sdk: '>=2.18.6 <3.0.0'
+
+# Dependencies specify other packages that your package needs to work
+dependencies:
+  flutter:
+    sdk: flutter
+  cupertino_icons: ^1.0.2
+  google_fonts: ^4.0.3
+  imageview360: ^1.3.0
+  gradient_borders: ^1.0.0
+  like_button: ^2.0.5
+
+# Development dependencies for testing
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^2.0.0
+
+# Flutter-specific configurations
+flutter:
+  # Ensures that the Material Icons font is included with your application
+  uses-material-design: true
+
+  # Assets to be included in your application
+  assets:
+    - assets/images/
+
+# Optional: Fonts section for custom fonts in your application
+# fonts:
+#   - family: Schyler
+#     fonts:
+#       - asset: fonts/Schyler-Regular.ttf
+#       - asset: fonts/Schyler-Italic.ttf
+#         style: italic
+#   - family: Trajan Pro
+#     fonts:
+#       - asset: fonts/TrajanPro.ttf
+#       - asset: fonts/TrajanPro_Bold.ttf
+#         weight: 700
