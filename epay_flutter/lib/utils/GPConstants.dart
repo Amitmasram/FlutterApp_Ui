@@ -1,0 +1,1 @@
+const GPAYAppName = 'EPay';
