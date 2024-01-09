@@ -1,0 +1,1 @@
+ D:\\flutterApp\ Ui\\donut_app\\.dart_tool\\flutter_build\\a41b444c2c42e38fb47d88f1ccb11efc\\native_assets.yaml: 

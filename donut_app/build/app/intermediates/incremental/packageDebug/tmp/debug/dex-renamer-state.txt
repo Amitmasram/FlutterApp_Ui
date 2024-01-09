@@ -1,0 +1,4 @@
+#Mon Jan 08 22:47:45 IST 2024
+base.0=D\:\\flutterApp Ui\\donut_app\\build\\app\\intermediates\\dex\\debug\\mergeDexDebug\\classes.dex
+path.0=classes.dex
+renamed.0=classes.dex
