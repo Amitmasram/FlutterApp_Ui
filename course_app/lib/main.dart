@@ -4,6 +4,7 @@ import 'view/home/home.dart';
 void main() {
   runApp(const MyApp());
 }
+// Follow me on instagram and Linkdlin - Amitmasram
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
