@@ -7,6 +7,8 @@ void main() {
   runApp(const MyApp());
 }
 
+// Medition App
+// Follow on github
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
@@ -15,9 +17,9 @@ class MyApp extends StatelessWidget {
     return GetMaterialApp(
         title: 'Flutter Demo',
         debugShowCheckedModeBanner: false,
-        scrollBehavior: ScrollBehavior().copyWith(overscroll: false),
+        scrollBehavior: const ScrollBehavior().copyWith(overscroll: false),
         theme: ThemeData(
-            primarySwatch: Colors.blue,
+            primarySwatch: Colors.green,
             scaffoldBackgroundColor: Colors.black54),
         home: const IntroductionView());
   }

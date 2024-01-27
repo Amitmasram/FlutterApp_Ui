@@ -21,7 +21,7 @@ class _IntroductionViewState extends State<IntroductionView>
   @override
   void initState() {
     _animationController = AnimationController(
-        vsync: this, duration: Duration(milliseconds: 3000));
+        vsync: this, duration: const Duration(milliseconds: 3000));
     _animationController.repeat(reverse: true);
     _animation = Tween(begin: 0.0, end: 1.0).animate(_animationController)
       ..addListener(() {
