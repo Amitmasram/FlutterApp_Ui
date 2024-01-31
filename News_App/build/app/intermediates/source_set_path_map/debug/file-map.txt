@@ -1,0 +1,14 @@
+com.example.news_app-jetified-window-1.0.0-beta04-0 C:\Users\Dell\.gradle\caches\transforms-3\25cee5f028ac2a6b79fd6278ff5b59e2\transformed\jetified-window-1.0.0-beta04\res
+com.example.news_app-jetified-annotation-experimental-1.1.0-1 C:\Users\Dell\.gradle\caches\transforms-3\6c0c163cc77ae6c91f9f7dfcd179c29c\transformed\jetified-annotation-experimental-1.1.0\res
+com.example.news_app-core-1.6.0-2 C:\Users\Dell\.gradle\caches\transforms-3\7e9df2ac2213a6bd3cef0f2f27870d79\transformed\core-1.6.0\res
+com.example.news_app-jetified-window-java-1.0.0-beta04-3 C:\Users\Dell\.gradle\caches\transforms-3\ae81e06d24c799147c26814497a2a305\transformed\jetified-window-java-1.0.0-beta04\res
+com.example.news_app-debug-4 D:\flutterApp Ui\News_App\android\app\src\debug\res
+com.example.news_app-main-5 D:\flutterApp Ui\News_App\android\app\src\main\res
+com.example.news_app-pngs-6 D:\flutterApp Ui\News_App\build\app\generated\res\pngs\debug
+com.example.news_app-resValues-7 D:\flutterApp Ui\News_App\build\app\generated\res\resValues\debug
+com.example.news_app-rs-8 D:\flutterApp Ui\News_App\build\app\generated\res\rs\debug
+com.example.news_app-mergeDebugResources-9 D:\flutterApp Ui\News_App\build\app\intermediates\incremental\debug\mergeDebugResources\merged.dir
+com.example.news_app-mergeDebugResources-10 D:\flutterApp Ui\News_App\build\app\intermediates\incremental\debug\mergeDebugResources\stripped.dir
+com.example.news_app-merged_res-11 D:\flutterApp Ui\News_App\build\app\intermediates\merged_res\debug
+com.example.news_app-packaged_res-12 D:\flutterApp Ui\News_App\build\path_provider_android\intermediates\packaged_res\debug
+com.example.news_app-packaged_res-13 D:\flutterApp Ui\News_App\build\sqflite\intermediates\packaged_res\debug
