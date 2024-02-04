@@ -4,7 +4,12 @@ import 'package:nb_utils/nb_utils.dart';
 
 import 'BMColors.dart';
 
-AppBar appBar(BuildContext context, String title, {List<Widget>? actions, bool showBack = true, Color? color, Color? iconColor, Color? textColor}) {
+AppBar appBar(BuildContext context, String title,
+    {List<Widget>? actions,
+    bool showBack = true,
+    Color? color,
+    Color? iconColor,
+    Color? textColor}) {
   return AppBar(
     automaticallyImplyLeading: false,
     backgroundColor: color ?? appStore.appBarColor,
@@ -13,16 +18,19 @@ AppBar appBar(BuildContext context, String title, {List<Widget>? actions, bool s
             onPressed: () {
               finish(context);
             },
-            icon: Icon(Icons.arrow_back, color: appStore.isDarkModeOn ? white : black),
+            icon: Icon(Icons.arrow_back,
+                color: appStore.isDarkModeOn ? white : black),
           )
         : null,
-    title: appBarTitleWidget(context, title, textColor: textColor, color: color),
+    title:
+        appBarTitleWidget(context, title, textColor: textColor, color: color),
     actions: actions,
     elevation: 0.5,
   );
 }
 
-Widget appBarTitleWidget(context, String title, {Color? color, Color? textColor}) {
+Widget appBarTitleWidget(context, String title,
+    {Color? color, Color? textColor}) {
   return Container(
     width: MediaQuery.of(context).size.width,
     height: 60,
@@ -31,7 +39,8 @@ Widget appBarTitleWidget(context, String title, {Color? color, Color? textColor}
       children: <Widget>[
         Text(
           title,
-          style: boldTextStyle(color: color ?? appStore.textPrimaryColor, size: 20),
+          style: boldTextStyle(
+              color: color ?? appStore.textPrimaryColor, size: 20),
           maxLines: 1,
         ).expand(),
       ],
@@ -49,7 +58,7 @@ class CustomTheme extends StatelessWidget {
     return Theme(
       data: appStore.isDarkModeOn
           ? ThemeData.dark().copyWith(
-              accentColor: bmBlueColor,
+              hintColor: bmBlueColor,
               backgroundColor: context.scaffoldBackgroundColor,
             )
           : ThemeData.light(),
@@ -57,25 +66,33 @@ class CustomTheme extends StatelessWidget {
     );
   }
 }
-Widget upperContainer({required Widget child, required BuildContext screenContext}) {
+
+Widget upperContainer(
+    {required Widget child, required BuildContext screenContext}) {
   return Container(
-    color: appStore.isDarkModeOn ? appStore.scaffoldBackground! : bmLightScaffoldBackgroundColor,
+    color: appStore.isDarkModeOn
+        ? appStore.scaffoldBackground!
+        : bmLightScaffoldBackgroundColor,
     width: screenContext.width(),
     child: Container(
       padding: EdgeInsets.all(20),
-      decoration: BoxDecoration(color: bmSpecialColor, borderRadius: radiusOnly(bottomLeft: 40)),
+      decoration: BoxDecoration(
+          color: bmSpecialColor, borderRadius: radiusOnly(bottomLeft: 40)),
       child: child,
     ),
   );
 }
 
-Widget lowerContainer({required Widget child, required BuildContext screenContext}) {
+Widget lowerContainer(
+    {required Widget child, required BuildContext screenContext}) {
   return Container(
     color: bmSpecialColor,
     width: screenContext.width(),
     child: Container(
       decoration: BoxDecoration(
-        color: appStore.isDarkModeOn ? appStore.scaffoldBackground! : bmLightScaffoldBackgroundColor,
+        color: appStore.isDarkModeOn
+            ? appStore.scaffoldBackground!
+            : bmLightScaffoldBackgroundColor,
         borderRadius: radiusOnly(topRight: 40),
       ),
       child: child,
@@ -96,9 +113,14 @@ Widget headerText({required String title}) {
 }
 
 Widget titleText({required String title, int? size, int? maxLines}) {
-  return Text(title, style: boldTextStyle(size: size != null ? size : 20, color: appStore.isDarkModeOn ? white : bmSpecialColorDark),
+  return Text(
+    title,
+    style: boldTextStyle(
+        size: size != null ? size : 20,
+        color: appStore.isDarkModeOn ? white : bmSpecialColorDark),
     maxLines: maxLines != null ? maxLines : 1,
-    overflow: TextOverflow.ellipsis,);
+    overflow: TextOverflow.ellipsis,
+  );
 }
 
 class SettingContainerWidget extends StatelessWidget {
@@ -113,10 +135,9 @@ class SettingContainerWidget extends StatelessWidget {
       padding: EdgeInsets.symmetric(horizontal: 8, vertical: 8),
       decoration: BoxDecoration(
         borderRadius: radius(defaultRadius),
-        border: Border.all(color:  context.dividerColor, width: 2),
+        border: Border.all(color: context.dividerColor, width: 2),
       ),
       child: child,
     );
   }
 }
-
