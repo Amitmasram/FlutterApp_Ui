@@ -248,7 +248,8 @@ class _RatingBarIndicatorState extends State<RatingBarIndicator> {
 
   @override
   Widget build(BuildContext context) {
-    _isRTL = (widget.textDirection ?? Directionality.of(context)) == TextDirection.rtl;
+    _isRTL = (widget.textDirection ?? Directionality.of(context)) ==
+        TextDirection.rtl;
     _ratingNumber = widget.rating.truncate() + 1;
     _ratingFraction = widget.rating - _ratingNumber + 1;
     return SingleChildScrollView(
@@ -273,7 +274,8 @@ class _RatingBarIndicatorState extends State<RatingBarIndicator> {
       widget.itemCount,
       (index) {
         if (widget.textDirection != null) {
-          if (widget.textDirection == TextDirection.rtl && Directionality.of(context) != TextDirection.rtl) {
+          if (widget.textDirection == TextDirection.rtl &&
+              Directionality.of(context) != TextDirection.rtl) {
             return Transform(
               transform: Matrix4.identity()..scale(-1.0, 1.0, 1.0),
               alignment: Alignment.center,
@@ -448,7 +450,8 @@ class RatingBar extends StatefulWidget {
     this.minRating = 0,
     this.maxRating,
   }) : assert(
-          (itemBuilder == null && ratingWidget != null) || (itemBuilder != null && ratingWidget == null),
+          (itemBuilder == null && ratingWidget != null) ||
+              (itemBuilder != null && ratingWidget == null),
           'itemBuilder and ratingWidget can\'t be initialized at the same time.'
           'Either remove ratingWidget or itembuilder.',
         );
@@ -492,7 +495,8 @@ class _RatingBarState extends State<RatingBar> {
 
   @override
   Widget build(BuildContext context) {
-    _isRTL = (widget.textDirection ?? Directionality.of(context)) == TextDirection.rtl;
+    _isRTL = (widget.textDirection ?? Directionality.of(context)) ==
+        TextDirection.rtl;
     iconRating = 0.0;
     return Material(
       color: Colors.transparent,
@@ -513,11 +517,14 @@ class _RatingBarState extends State<RatingBar> {
     if (index >= _rating!) {
       ratingWidget = _NoRatingWidget(
         size: widget.itemSize,
-        child: widget.ratingWidget?.empty ?? widget.itemBuilder!(context, index),
+        child:
+            widget.ratingWidget?.empty ?? widget.itemBuilder!(context, index),
         enableMask: widget.ratingWidget == null,
         unratedColor: widget.unratedColor ?? Colors.grey[200],
       );
-    } else if (index >= _rating! - (widget.allowHalfRating ? 0.5 : 1.0) && index < _rating! && widget.allowHalfRating) {
+    } else if (index >= _rating! - (widget.allowHalfRating ? 0.5 : 1.0) &&
+        index < _rating! &&
+        widget.allowHalfRating) {
       if (widget.ratingWidget?.half == null) {
         ratingWidget = _HalfRatingWidget(
           size: widget.itemSize,
@@ -550,7 +557,8 @@ class _RatingBarState extends State<RatingBar> {
         height: widget.itemSize,
         child: FittedBox(
           fit: BoxFit.contain,
-          child: widget.ratingWidget?.full ?? widget.itemBuilder!(context, index),
+          child:
+              widget.ratingWidget?.full ?? widget.itemBuilder!(context, index),
         ),
       );
       iconRating += 1.0;
@@ -573,7 +581,9 @@ class _RatingBarState extends State<RatingBar> {
                 iconRating = 0.0;
               }
             : null,
-        onHorizontalDragUpdate: _isHorizontal ? (dragUpdates) => _dragOperation(dragUpdates, widget.direction) : null,
+        onHorizontalDragUpdate: _isHorizontal
+            ? (dragUpdates) => _dragOperation(dragUpdates, widget.direction)
+            : null,
         onVerticalDragStart: _isHorizontal ? null : (_) => _glow.value = true,
         onVerticalDragEnd: _isHorizontal
             ? null
@@ -582,14 +592,17 @@ class _RatingBarState extends State<RatingBar> {
                 widget.onRatingUpdate(iconRating);
                 iconRating = 0.0;
               },
-        onVerticalDragUpdate: _isHorizontal ? null : (dragUpdates) => _dragOperation(dragUpdates, widget.direction),
+        onVerticalDragUpdate: _isHorizontal
+            ? null
+            : (dragUpdates) => _dragOperation(dragUpdates, widget.direction),
         child: Padding(
           padding: widget.itemPadding,
           child: ValueListenableBuilder(
             valueListenable: _glow,
             builder: (context, dynamic glow, _) {
               if (glow && widget.glow) {
-                Color glowColor = widget.glowColor ?? Theme.of(context).accentColor;
+                Color glowColor =
+                    widget.glowColor ?? Theme.of(context).hintColor;
                 return DecoratedBox(
                   decoration: BoxDecoration(
                     shape: BoxShape.circle,
